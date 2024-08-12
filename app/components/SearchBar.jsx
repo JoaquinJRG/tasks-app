@@ -9,7 +9,7 @@ export function SearchBar({ searchFunction }) {
     let newText = e.target.value;
     setText(newText);
     searchFunction(newText);
-  }
+  };
 
   return (
     <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-md w-full shadow-sm">

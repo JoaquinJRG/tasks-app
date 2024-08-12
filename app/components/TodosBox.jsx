@@ -2,8 +2,6 @@ import { Todo } from "./Todo";
 
 export function TodosBox({ filterTodos }) {
 
-
-
   return (
     <ul className="flex flex-col gap-2">
       {

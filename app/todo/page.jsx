@@ -3,11 +3,13 @@ import { TodosClass } from "../lib/todos";
 import { SearchBar } from "../components/SearchBar";
 import { TodosBox } from "../components/TodosBox";
 import { useState, createContext, useEffect } from "react";
+import { TodoModal } from "../components/TodoModal";
 
 export const TodoContext = createContext();
 
 export default function TodoPage() {
 
+  const [showModal, setShowModal] = useState(false);
   const [todosList, setTodosList] = useState([]);
   const [filterTodos, setFilterTodos] = useState([]);
 
@@ -28,8 +30,10 @@ export default function TodoPage() {
 
   return (
     <TodoContext.Provider value={{ setTodosList, setFilterTodos }}>
+      {showModal && <TodoModal closeModal={setShowModal} />}
       <header className="flex items-center gap-3">
         <button
+          onClick={() => setShowModal(!showModal)}
           className="min-w-10 min-h-10 bg-black text-white rounded-md text-xl shadow-sm"
         >+</button>
         <SearchBar searchFunction={searchFunction} />

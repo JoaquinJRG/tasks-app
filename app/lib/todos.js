@@ -1,37 +1,6 @@
 
 export class TodosClass {
-  static todos = [
-    {
-      id: crypto.randomUUID(),
-      text: "Task 1",
-      isDone: false,
-    },
-    {
-      id: crypto.randomUUID(),
-      text: "Task 2",
-      isDone: false,
-    },
-    {
-      id: crypto.randomUUID(),
-      text: "Task 3",
-      isDone: true,
-    },
-    {
-      id: crypto.randomUUID(),
-      text: "Task 4",
-      isDone: false,
-    },
-    {
-      id: crypto.randomUUID(),
-      text: "Task 5",
-      isDone: false,
-    },
-    {
-      id: crypto.randomUUID(),
-      text: "Task 6",
-      isDone: false,
-    }
-  ];
+  static todos = [];
 
   static async getAll() {
 
