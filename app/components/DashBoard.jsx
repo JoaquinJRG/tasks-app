@@ -4,10 +4,8 @@ import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { NotesIcon } from "./icons/NotesIcon";
 import { TaskIcon } from "./icons/TaskIcon";
-import { SettingsIcon } from "./icons/SettingIcon";
 import { SunIcon } from "./icons/SunIcon";
 import { MoonIcon } from "./icons/MoonIcon";
-import { useState } from "react";
 import useDarkTheme from "../lib/useDarkTheme";
 
 export function DashBoard() {
@@ -45,12 +43,6 @@ export function DashBoard() {
             {darkTheme == 'light' ? <MoonIcon /> : <SunIcon />}
             {darkTheme == 'light' ? <h2>Dark</h2> : <h2>Light</h2>}
           </div>
-        </li>
-        <li className={clsx({ "bg-neutral-300": pathName == "/settings" })}>
-          <Link href="/settings" className="flex items-center gap-2">
-            <SettingsIcon />
-            <h2>Settings</h2>
-          </Link>
         </li>
       </ul>
     </nav>

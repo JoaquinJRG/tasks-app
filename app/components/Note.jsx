@@ -43,19 +43,19 @@ export function Note({ note }) {
       >
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-semibold">{note.title}</h1>
-          <div className="cursor-pointer hover:scale-125 transition-transform" onClick={handleDelete}>
+          <button className="hover:scale-125 transition-transform" onClick={handleDelete}>
             <TrashIcon />
-          </div>
+          </button>
         </div>
         <p className="flex-1">{note.text}</p>
         <div className="flex items-center justify-between">
           <span className="text-xs">{formatedDate}</span>
-          <div
+          <button
             onClick={() => setShowModal(true)}
-            className="cursor-pointer hover:scale-125 transition-transform"
+            className="hover:scale-125 transition-transform"
           >
             <EditIcon />
-          </div>
+          </button>
         </div>
       </div>
     </>

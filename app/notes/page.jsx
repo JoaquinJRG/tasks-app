@@ -8,7 +8,7 @@ import { NotesModal } from "../components/NotesModal";
 
 export const NotesContext = createContext();
 
-export default function Notes() {
+export default function NotePage() {
 
   const [notesList, setNotesList] = useState([]);
   const [filterList, setFilterList] = useState([]);

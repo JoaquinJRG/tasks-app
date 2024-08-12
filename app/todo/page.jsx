@@ -1,14 +1,33 @@
 "use client"
+import { TodosClass } from "../lib/todos";
 import { SearchBar } from "../components/SearchBar";
+import { TodosBox } from "../components/TodosBox";
+import { useState, createContext, useEffect } from "react";
 
-export default function Todo() {
+export const TodoContext = createContext();
+
+export default function TodoPage() {
+
+  const [todosList, setTodosList] = useState([]);
+  const [filterTodos, setFilterTodos] = useState([]);
+
+  useEffect(() => {
+    const fetchTodos = async () => {
+      const todos = await TodosClass.getAll();
+      setTodosList([...todos]);
+      setFilterTodos([...todos]);
+    };
+
+    fetchTodos();
+  }, []);
 
   const searchFunction = (text) => {
-    console.log(text);
+    const newFilterTodos = TodosClass.search(text);
+    setFilterTodos(newFilterTodos);
   };
 
   return (
-    <>
+    <TodoContext.Provider value={{ setTodosList, setFilterTodos }}>
       <header className="flex items-center gap-3">
         <button
           className="min-w-10 min-h-10 bg-black text-white rounded-md text-xl shadow-sm"
@@ -17,7 +36,8 @@ export default function Todo() {
       </header>
       <main>
         <h1 className="text-3xl lg:text-5xl my-5">To Do</h1>
-      </main>
-    </>
+        <TodosBox filterTodos={filterTodos} />
+      </main >
+    </TodoContext.Provider>
   );
 }

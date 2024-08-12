@@ -22,7 +22,7 @@ export function SearchBar({ searchFunction }) {
         type="text"
         value={text}
         placeholder="Search"
-        className="outline-none w-full"
+        className=" w-full outline-none"
         onChange={handleChange}
       />
     </div>
