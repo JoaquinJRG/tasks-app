@@ -10,11 +10,11 @@ import useDarkTheme from "../lib/useDarkTheme";
 
 export function DashBoard() {
   const pathName = usePathname();
-  const [darkTheme, setDarkTheme] = useDarkTheme();
+  //const [darkTheme, setDarkTheme] = useDarkTheme();
 
-  const darkModeHandler = () => {
-    setDarkTheme(darkTheme);
-  };
+  //const darkModeHandler = () => {
+  //  setDarkTheme(darkTheme);
+  //};
 
   return (
     <nav className="h-full flex lg:flex-col items-center lg:items-stretch justify-between">
@@ -38,12 +38,12 @@ export function DashBoard() {
         </li>
       </ul>
       <ul className="flex flex-row items-center lg:items-stretch lg:flex-col gap-2 *:p-2 *:rounded-md">
-        <li onClick={darkModeHandler} className="cursor-pointer">
+        {/*<li onClick={darkModeHandler} className="cursor-pointer">
           <div className="flex items-center gap-2 select-none">
             {darkTheme == 'light' ? <MoonIcon /> : <SunIcon />}
             {darkTheme == 'light' ? <h2>Dark</h2> : <h2>Light</h2>}
           </div>
-        </li>
+        </li>*/}
       </ul>
     </nav>
   );
