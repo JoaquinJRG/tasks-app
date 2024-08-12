@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`p-3 w-screen h-screen flex flex-col lg:flex-row gap-2 ${inter.className}`}>
+      <body className={`p-3 w-screen h-screen flex flex-col lg:flex-row gap-2 ${inter.className} antialiased`}>
         <aside className="bg-neutral-200 dark:bg-black dark:text-white h-14 lg:h-full lg:w-52 rounded-md p-4 order-2 lg:order-1 overflow-x-scroll overflow-y-hidden lg:overflow-x-auto">
           <DashBoard />
         </aside>
