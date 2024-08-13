@@ -30,7 +30,7 @@ export function NotesModal({ id, ptitle = "", ptext = "", pcolor = "#FFF", close
   };
 
   return (
-    <div className="h-full w-full flex items-center justify-center absolute top-0 right-0 bg-black/40">
+    <div className="h-full w-full flex items-center justify-center absolute top-0 right-0 bg-black/40 z-10">
       <div className="flex flex-col gap-3 rounded-md p-3 shadow-md w-80" style={{ backgroundColor: colorSelect }}>
         <main className="flex flex-col gap-2">
           <input
