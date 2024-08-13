@@ -2,7 +2,7 @@
 import { TodosClass } from "../lib/todos";
 import { SearchBar } from "../components/SearchBar";
 import { TodosBox } from "../components/TodosBox";
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext, useEffect, Suspense } from "react";
 import { TodoModal } from "../components/TodoModal";
 
 export const TodoContext = createContext();

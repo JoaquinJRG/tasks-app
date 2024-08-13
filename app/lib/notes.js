@@ -54,6 +54,30 @@ export class NotesClass {
     
     return this.notes; 
   }; 
+
+  static sortByDate(order) {
+    if (order) {
+      return this.notes.sort((a, b) => new Date(a.date) - new Date(b.date));
+    } 
+    return this.notes.sort((a, b) => new Date(b.date) - new Date(a.date));
+  };
+
+  static sortByTitle(order) {
+
+    if (order) {
+      return this.notes.sort((a,b) => {
+        if (a.title > b.title) return 1;
+        if (a.title < b.title) return -1;
+        return 0;
+      }); 
+    }
+
+    return this.notes.sort((a,b) => {
+      if (a.title < b.title) return 1;
+      if (a.title > b.title) return -1;
+      return 0;
+    }); 
+  };
   
 }; 
 

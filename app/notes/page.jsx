@@ -4,6 +4,7 @@ import { SearchBar } from "../components/SearchBar";
 import { NotesClass } from "../lib/notes";
 import { NotesBox } from "../components/NotesBox";
 import { NotesModal } from "../components/NotesModal";
+import { DropDown } from "../components/DropDown";
 
 
 export const NotesContext = createContext();
@@ -39,9 +40,7 @@ export default function NotePage() {
           className="min-w-10 min-h-10 bg-black text-white rounded-md text-xl shadow-sm"
         >+</button>
         <SearchBar searchFunction={searchFunction} />
-        <div>
-          filtros
-        </div>
+        <DropDown />
       </header>
       <main>
         <h1 className="text-3xl lg:text-5xl my-5">Notes</h1>

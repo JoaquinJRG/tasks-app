@@ -33,7 +33,7 @@ export function Todo({ todo }) {
       >
         {done ? (<CheckIcon />) : ""}
       </button>
-      <span className={`flex-1 pl-5 text-wrap ${done ? "line-through text-gray-700" : ""}`}>
+      <span className={`flex-1 ml-5 text-wrap ${done ? "line-through text-gray-700" : ""}`}>
         {todo.text}
       </span>
       <div className="flex items-center gap-3 border-l border-black pl-3">
