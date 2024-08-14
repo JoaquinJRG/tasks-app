@@ -34,12 +34,12 @@ export default function TodoPage() {
       <header className="flex items-center gap-3">
         <button
           onClick={() => setShowModal(!showModal)}
-          className="min-w-10 min-h-10 bg-black text-white rounded-md text-xl shadow-sm"
+          className="min-w-10 min-h-10 bg-[#a688fa] dark:text-black text-white rounded-md text-xl shadow-sm"
         >+</button>
         <SearchBar searchFunction={searchFunction} />
       </header>
       <main>
-        <h1 className="text-3xl lg:text-5xl my-5">To Do</h1>
+        <h1 className="text-3xl lg:text-5xl my-5 dark:text-white">To Do</h1>
         <TodosBox filterTodos={filterTodos} />
       </main >
     </TodoContext.Provider>

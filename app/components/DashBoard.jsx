@@ -6,15 +6,33 @@ import { NotesIcon } from "./icons/NotesIcon";
 import { TaskIcon } from "./icons/TaskIcon";
 import { SunIcon } from "./icons/SunIcon";
 import { MoonIcon } from "./icons/MoonIcon";
-import useDarkTheme from "../lib/useDarkTheme";
+import { useEffect, useState } from "react";
 
 export function DashBoard() {
   const pathName = usePathname();
-  //const [darkTheme, setDarkTheme] = useDarkTheme();
+  const [theme, setTheme] = useState();
 
-  //const darkModeHandler = () => {
-  //  setDarkTheme(darkTheme);
-  //};
+  useEffect(() => {
+    const newtheme = localStorage.getItem('theme');
+    if (newtheme === 'dark') {
+      document.documentElement.classList.add('dark');
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      setTheme('light');
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      setTheme('dark');
+    }
+  }
 
   return (
     <nav className="h-full flex lg:flex-col items-center lg:items-stretch justify-between">
@@ -24,13 +42,13 @@ export function DashBoard() {
             <h1 className="text-2xl hidden lg:block">Task APP</h1>
           </Link>
         </li>
-        <li className={clsx({ "bg-neutral-300": pathName == "/notes" })}>
+        <li className={clsx("border border-transparent hover:border-[#ba9ffb] transition-colors", { "bg-[#ba9ffb] text-black": pathName == "/notes" })}>
           <Link href={"/notes"} className="flex items-center gap-2">
             <NotesIcon />
             <h2>Notes</h2>
           </Link>
         </li>
-        <li className={clsx({ "bg-neutral-300": pathName == "/todo" })}>
+        <li className={clsx("border border-transparent hover:border-[#ba9ffb] transition-colors", { "bg-[#ba9ffb] text-black": pathName == "/todo" })}>
           <Link href={"/todo"} className="flex items-center gap-2">
             <TaskIcon />
             <h2>ToDo</h2>
@@ -38,12 +56,12 @@ export function DashBoard() {
         </li>
       </ul>
       <ul className="flex flex-row items-center lg:items-stretch lg:flex-col gap-2 *:p-2 *:rounded-md">
-        {/*<li onClick={darkModeHandler} className="cursor-pointer">
+        <li onClick={toggleTheme} className="cursor-pointer">
           <div className="flex items-center gap-2 select-none">
-            {darkTheme == 'light' ? <MoonIcon /> : <SunIcon />}
-            {darkTheme == 'light' ? <h2>Dark</h2> : <h2>Light</h2>}
+            {theme === 'dark' ? <MoonIcon /> : <SunIcon />}
+            {theme === 'dark' ? <h2>Dark</h2> : <h2>Light</h2>}
           </div>
-        </li>*/}
+        </li>
       </ul>
     </nav>
   );

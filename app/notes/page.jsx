@@ -37,13 +37,13 @@ export default function NotePage() {
       <header className="flex items-center gap-3">
         <button
           onClick={() => setShowModal(true)}
-          className="min-w-10 min-h-10 bg-black text-white rounded-md text-xl shadow-sm"
+          className="min-w-10 min-h-10 bg-[#a688fa] dark:text-black text-white rounded-md text-xl shadow-sm"
         >+</button>
         <SearchBar searchFunction={searchFunction} />
         <DropDown />
       </header>
       <main>
-        <h1 className="text-3xl lg:text-5xl my-5">Notes</h1>
+        <h1 className="text-3xl lg:text-5xl my-5 dark:text-white">Notes</h1>
         <NotesBox filterList={filterList} />
       </main>
     </NotesContext.Provider>

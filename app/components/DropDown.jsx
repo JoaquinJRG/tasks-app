@@ -58,8 +58,8 @@ export function DropDown() {
   };
 
   return (
-    <details className="relative bg-white w-40 lg:w-44 py-2 px-1 rounded-md shadow-sm border open:border-black">
-      <summary className="flex items-center justify-center gap-1 list-none select-none cursor-pointer">
+    <details className="relative w-40 lg:w-44 py-2 px-1 rounded-md shadow-sm bg-[#a688fa]">
+      <summary className="flex items-center justify-center gap-1 list-none select-none cursor-pointer ">
         <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-sort-ascending">
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M4 6l7 0" />
@@ -70,20 +70,20 @@ export function DropDown() {
         </svg>
         Sort by
       </summary>
-      <div className="absolute left-0 mt-4 w-full bg-white z-10 rounded-md shadow-sm p-1">
+      <div className="absolute left-0 mt-4 w-full bg-white dark:bg-[#46424f] dark:text-white z-10 rounded-md shadow-sm p-1">
         <div
           onClick={handleDate}
           className={clsx(
-            "flex py-2 px-3 border border-transparent hover:border-black transition-colors cursor-pointer rounded-md",
-            { "bg-gray-300": date }
+            "flex py-2 px-3 border border-transparent hover:border-[#ba9ffb] transition-colors cursor-pointer rounded-md",
+            { "bg-[#ba9ffb] text-black": date }
           )}>
           Date
         </div>
         <div
           onClick={handleText}
           className={clsx(
-            "flex py-2 px-3 mt-1 mb-1 border border-transparent hover:border-black transition-colors cursor-pointer rounded-md",
-            { "bg-gray-300": title }
+            "flex py-2 px-3 mt-1 mb-1 border border-transparent hover:border-[#ba9ffb] transition-colors cursor-pointer rounded-md",
+            { "bg-[#ba9ffb] text-black": title }
           )}>
           Title
         </div>
@@ -91,14 +91,14 @@ export function DropDown() {
         <div
           onClick={handleAsc}
           className={clsx(
-            "flex py-2 px-3 border border-transparent hover:border-black mt-1 transition-colors cursor-pointer rounded-md",
-            { "bg-gray-300": asc }
+            "flex py-2 px-3 border border-transparent hover:border-[#ba9ffb] mt-1 transition-colors cursor-pointer rounded-md",
+            { "bg-[#ba9ffb] text-black": asc }
           )}>ASC</div>
         <div
           onClick={handleDes}
           className={clsx(
-            "flex py-2 px-3 border border-transparent hover:border-black mt-1 transition-colors cursor-pointer rounded-md",
-            { "bg-gray-300": des }
+            "flex py-2 px-3 border border-transparent hover:border-[#ba9ffb] mt-1 transition-colors cursor-pointer rounded-md",
+            { "bg-[#ba9ffb] text-black": des }
           )}>DESC</div>
       </div>
     </details>

@@ -5,7 +5,7 @@ import { colors } from "../lib/colors";
 import { NotesClass } from "../lib/notes";
 import { NotesContext } from "../notes/page";
 
-export function NotesModal({ id, ptitle = "", ptext = "", pcolor = "#FFF", closeModal, edit = false }) {
+export function NotesModal({ id, ptitle = "", ptext = "", pcolor = "#FEC871", closeModal, edit = false }) {
 
   const [title, setTitle] = useState(ptitle);
   const [text, setText] = useState(ptext);
@@ -60,14 +60,14 @@ export function NotesModal({ id, ptitle = "", ptext = "", pcolor = "#FFF", close
                 onClick={() => setColor(color)}
                 style={{ background: color }}
                 className={clsx("w-10 h-10 rounded-md cursor-pointer",
-                  { "border-2 border-black": colorSelect === color }
+                  { "border-2 border-[#a688fa]": colorSelect === color }
                 )}></div>
             ))
           }
         </nav>
         <footer className="flex items-center justify-start gap-2 mt-5">
-          <button className=" rounded-md px-3 py-1 bg-white border border-black" onClick={() => closeModal(false)}>Close</button>
-          <button className="rounded-md px-3 py-1 bg-white border border-black" onClick={edit ? handleEdit : handleSave}>Save</button>
+          <button className=" rounded-md px-3 py-1 bg-[#a688fa] text-white" onClick={() => closeModal(false)}>Close</button>
+          <button className="rounded-md px-3 py-1 bg-[#a688fa] text-white" onClick={edit ? handleEdit : handleSave}>Save</button>
         </footer>
       </div>
     </div>
