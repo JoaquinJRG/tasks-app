@@ -17,10 +17,10 @@
   border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: black;
+  background: #a688fa;
 }
 ::-webkit-scrollbar-thumb:active {
-  background: black;
+  background: #a688fa;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
