@@ -16,7 +16,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`p-3 w-screen h-screen flex flex-col lg:flex-row gap-2 ${inter.className} antialiased dark:bg-[#1a1625]`}>
+      <body className={`p-3 w-screen h-dvh flex flex-col lg:flex-row gap-2 ${inter.className} antialiased dark:bg-[#1a1625]`}>
         <aside className="bg-neutral-200 dark:bg-[#46424f] dark:text-white h-14 lg:h-full lg:w-52 rounded-md p-4 order-2 lg:order-1">
           <DashBoard />
         </aside>
