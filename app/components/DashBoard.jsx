@@ -7,6 +7,7 @@ import { TaskIcon } from "./icons/TaskIcon";
 import { SunIcon } from "./icons/SunIcon";
 import { MoonIcon } from "./icons/MoonIcon";
 import { useEffect, useState } from "react";
+import { HomeIcon } from "./icons/HomeIcon";
 
 export function DashBoard() {
   const pathName = usePathname();
@@ -37,29 +38,32 @@ export function DashBoard() {
   return (
     <nav className="h-full flex lg:flex-col items-center lg:items-stretch justify-between">
       <ul className="flex flex-row items-center lg:items-stretch lg:flex-col gap-2 *:p-2 *:rounded-md">
-        <li>
+        <li className={clsx("hover:text-[#ba9ffb] transition-colors", { "bg-[#ba9ffb] text-black lg:text-[#ba9ffb] lg:bg-[#46424f]": pathName == "/" })}>
           <Link href={"/"} className="flex items-center">
+            <div className="block lg:hidden">
+              <HomeIcon />
+            </div>
             <h1 className="text-2xl hidden lg:block">Task APP</h1>
           </Link>
         </li>
         <li className={clsx("border border-transparent hover:border-[#ba9ffb] transition-colors", { "bg-[#ba9ffb] text-black": pathName == "/notes" })}>
           <Link href={"/notes"} className="flex items-center gap-2">
             <NotesIcon />
-            <h2>Notes</h2>
+            <h2 className="hidden lg:block">Notes</h2>
           </Link>
         </li>
         <li className={clsx("border border-transparent hover:border-[#ba9ffb] transition-colors", { "bg-[#ba9ffb] text-black": pathName == "/todo" })}>
           <Link href={"/todo"} className="flex items-center gap-2">
             <TaskIcon />
-            <h2>ToDo</h2>
+            <h2 className="hidden lg:block">ToDo</h2>
           </Link>
         </li>
       </ul>
       <ul className="flex flex-row items-center lg:items-stretch lg:flex-col gap-2 *:p-2 *:rounded-md">
-        <li onClick={toggleTheme} className="cursor-pointer">
+        <li onClick={toggleTheme} className="cursor-pointer border border-transparent hover:border-[#ba9ffb] transition-colors">
           <div className="flex items-center gap-2 select-none">
             {theme === 'dark' ? <MoonIcon /> : <SunIcon />}
-            {theme === 'dark' ? <h2>Dark</h2> : <h2>Light</h2>}
+            {theme === 'dark' ? <h2 className="hidden lg:block">Dark</h2> : <h2 className="hidden lg:block">Light</h2>}
           </div>
         </li>
       </ul>
