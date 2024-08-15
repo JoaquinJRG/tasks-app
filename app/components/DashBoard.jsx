@@ -38,7 +38,7 @@ export function DashBoard() {
   return (
     <nav className="h-full flex lg:flex-col items-center lg:items-stretch justify-between">
       <ul className="flex flex-row items-center lg:items-stretch lg:flex-col gap-2 *:p-2 *:rounded-md">
-        <li className={clsx({ "bg-[#ba9ffb] text-black lg:text-[#ba9ffb] lg:bg-[#46424f]": pathName == "/" })}>
+        <li className={clsx({ "bg-[#ba9ffb] text-black lg:text-[#ba9ffb] lg:bg-neutral-200 dark:lg:bg-[#46424f]": pathName == "/" })}>
           <Link href={"/"} className="flex items-center">
             <div className="block lg:hidden">
               <HomeIcon />

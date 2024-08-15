@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <aside className="bg-neutral-200 dark:bg-[#46424f] dark:text-white h-14 lg:h-full lg:w-52 rounded-md p-4 order-2 lg:order-1">
           <DashBoard />
         </aside>
-        <main className="flex-1 p-4 order-1 lg:order-2 overflow-y-scroll">
+        <main className="flex-1 p-2 lg:p-4 order-1 lg:order-2 overflow-y-scroll">
           {children}
         </main>
       </body>
