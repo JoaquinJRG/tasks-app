@@ -3,7 +3,6 @@ import { useContext, useState } from "react";
 import { TodosClass } from "../lib/todos";
 import { TodoContext } from "../todo/page";
 import { CheckIcon } from "./icons/CheckIcon";
-import { EditIcon } from "./icons/EditIcon";
 import { TrashIcon } from "./icons/TrashIcons";
 
 export function Todo({ todo }) {

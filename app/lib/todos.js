@@ -51,5 +51,17 @@ export class TodosClass {
     return this.todos; 
   };
 
+  static deleteAll () {
+    this.todos = []; 
+    localStorage.setItem('todos', JSON.stringify([])); 
+  }; 
+
+  static getPending () {
+    return this.todos.filter((todo) => !todo.isDone); 
+  }; 
+
+  static getCompleted () {
+    return this.todos.filter((todo) => todo.isDone); 
+  }; 
 
 }; 
