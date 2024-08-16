@@ -59,7 +59,7 @@ export function DropDown() {
 
   return (
     <details className="relative w-40 lg:w-44 py-2 px-1 rounded-md shadow-sm bg-[#a688fa]">
-      <summary className="flex items-center justify-center gap-1 list-none select-none cursor-pointer">
+      <summary className="flex items-center justify-center gap-1 list-none select-none cursor-pointer text-white dark:text-black">
         <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-sort-ascending hidden md:block">
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M4 6l7 0" />
@@ -70,7 +70,7 @@ export function DropDown() {
         </svg>
         Sort by
       </summary>
-      <div className="absolute left-0 mt-4 w-full bg-white dark:bg-[#46424f] dark:text-white z-10 rounded-md shadow-sm p-1">
+      <div className="absolute left-0 mt-4 w-full bg-neutral-100 dark:bg-[#46424f]  dark:text-white z-10 rounded-md shadow-sm p-1">
         <div
           onClick={handleDate}
           className={clsx(

@@ -24,11 +24,11 @@ export function Todo({ todo }) {
 
   return (
     <li
-      className="flex items-center justify-between py-4 lg:px-6 px-3 rounded-md bg-white dark:bg-[#2f2b3a] shadow-md"
+      className="flex items-center justify-between py-4 lg:px-6 px-3 rounded-md bg-neutral-50 dark:bg-[#2f2b3a] shadow-md"
     >
       <button
         onClick={() => handleCheck(todo.id, todo.text)}
-        className="flex justify-center items-center gap-1 w-5 h-5 border border-[#a688fa] text-[#a688fa] dark:bg-[#1a1625] rounded-sm"
+        className="flex justify-center items-center gap-1 w-5 h-5 border border-[#a688fa] text-[#a688fa] bg-white dark:bg-[#1a1625] rounded-sm"
       >
         {done ? (<CheckIcon />) : ""}
       </button>

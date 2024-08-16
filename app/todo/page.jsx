@@ -98,7 +98,7 @@ export default function TodoPage() {
           </div>
           <button
             onClick={deleteAll}
-            className="flex gap-2 p-2 rounded-md shadow-sm bg-[#a688fa] dark:text-black"
+            className="flex gap-2 p-2 rounded-md shadow-sm bg-[#a688fa] text-white dark:text-black"
           >
             <TrashIcon />
             <span>Clear All</span>
