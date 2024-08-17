@@ -49,13 +49,13 @@ export function DashBoard() {
         <li className={clsx("border border-transparent hover:border-[#ba9ffb] transition-colors", { "bg-[#ba9ffb] text-black": pathName == "/notes" })}>
           <Link href={"/notes"} className="flex items-center gap-2">
             <NotesIcon />
-            <h2 className="hidden lg:block">Notes</h2>
+            <h2 className="hidden lg:block">Notas</h2>
           </Link>
         </li>
         <li className={clsx("border border-transparent hover:border-[#ba9ffb] transition-colors", { "bg-[#ba9ffb] text-black": pathName == "/todo" })}>
           <Link href={"/todo"} className="flex items-center gap-2">
             <TaskIcon />
-            <h2 className="hidden lg:block">ToDo</h2>
+            <h2 className="hidden lg:block">Tareas</h2>
           </Link>
         </li>
       </ul>
@@ -63,7 +63,7 @@ export function DashBoard() {
         <li onClick={toggleTheme} className="cursor-pointer border border-transparent hover:border-[#ba9ffb] transition-colors">
           <div className="flex items-center gap-2 select-none">
             {theme === 'dark' ? <MoonIcon /> : <SunIcon />}
-            {theme === 'dark' ? <h2 className="hidden lg:block">Dark</h2> : <h2 className="hidden lg:block">Light</h2>}
+            {theme === 'dark' ? <h2 className="hidden lg:block">Oscuro</h2> : <h2 className="hidden lg:block">Claro</h2>}
           </div>
         </li>
       </ul>

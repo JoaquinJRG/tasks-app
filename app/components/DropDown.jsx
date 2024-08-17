@@ -68,7 +68,7 @@ export function DropDown() {
           <path d="M15 9l3 -3l3 3" />
           <path d="M18 6l0 12" />
         </svg>
-        Sort by
+        Ordenar
       </summary>
       <div className="absolute left-0 mt-4 w-full bg-neutral-100 dark:bg-[#46424f]  dark:text-white z-10 rounded-md shadow-sm p-1">
         <div
@@ -77,7 +77,7 @@ export function DropDown() {
             "flex py-2 px-3 border border-transparent hover:border-[#ba9ffb] transition-colors cursor-pointer rounded-md",
             { "bg-[#ba9ffb] text-black": date }
           )}>
-          Date
+          Fecha
         </div>
         <div
           onClick={handleText}
@@ -85,7 +85,7 @@ export function DropDown() {
             "flex py-2 px-3 mt-1 mb-1 border border-transparent hover:border-[#ba9ffb] transition-colors cursor-pointer rounded-md",
             { "bg-[#ba9ffb] text-black": title }
           )}>
-          Title
+          Titulo
         </div>
         <div className="bg-gray-500 w-full h-[1px]"></div>
         <div

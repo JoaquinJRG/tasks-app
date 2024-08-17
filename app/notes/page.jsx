@@ -43,7 +43,7 @@ export default function NotePage() {
         <DropDown />
       </header>
       <main>
-        <h1 className="text-3xl lg:text-5xl my-5 dark:text-white">Notes</h1>
+        <h1 className="text-3xl lg:text-5xl my-5 dark:text-white">Notas</h1>
         <NotesBox filterList={filterList} />
       </main>
     </NotesContext.Provider>

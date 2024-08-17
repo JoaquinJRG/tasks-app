@@ -74,26 +74,26 @@ export default function TodoPage() {
         <SearchBar searchFunction={searchFunction} />
       </header>
       <main>
-        <h1 className="text-3xl lg:text-5xl my-5 dark:text-white">To Do</h1>
+        <h1 className="text-3xl lg:text-5xl my-5 dark:text-white">Tareas</h1>
         <nav className="flex items-center justify-between mb-5 dark:text-white">
           <div className="flex items-center gap-5">
             <button
               onClick={handleAll}
               className={clsx({ "border-b-2 border-[#a688fa] text-[#a688fa]": all })}
             >
-              All
+              Todas
             </button>
             <button
               onClick={handlePending}
               className={clsx({ "border-b-2 border-[#a688fa] text-[#a688fa]": pending })}
             >
-              Pending
+              Pendientes
             </button>
             <button
               onClick={handleCompleted}
               className={clsx({ "border-b-2 border-[#a688fa] text-[#a688fa]": completed })}
             >
-              Completed
+              Completadas
             </button>
           </div>
           <button
@@ -101,7 +101,7 @@ export default function TodoPage() {
             className="flex gap-2 p-2 rounded-md shadow-sm bg-[#a688fa] text-white dark:text-black"
           >
             <TrashIcon />
-            <span>Clear All</span>
+            <span>Borrar Todo</span>
           </button>
         </nav>
         <TodosBox filterTodos={filterTodos} />

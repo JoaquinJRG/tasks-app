@@ -21,7 +21,7 @@ export function SearchBar({ searchFunction }) {
       <input
         type="text"
         value={text}
-        placeholder="Search"
+        placeholder="Buscar"
         className=" w-full outline-none bg-neutral-200 dark:bg-[#2f2b3a]"
         onChange={handleChange}
       />

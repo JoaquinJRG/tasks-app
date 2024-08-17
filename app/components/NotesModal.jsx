@@ -36,7 +36,7 @@ export function NotesModal({ id, ptitle = "", ptext = "", pcolor = "#FEC871", cl
           <input
             type="text"
             value={title}
-            placeholder="Title"
+            placeholder="Titulo"
             style={{ backgroundColor: colorSelect }}
             className="px-2 py-1 rounded-md placeholder:text-black outline-none text-xl font-semibold"
             required
@@ -45,7 +45,7 @@ export function NotesModal({ id, ptitle = "", ptext = "", pcolor = "#FEC871", cl
           <textarea
             type="text"
             value={text}
-            placeholder="Add a note ..."
+            placeholder="Añade una nota ..."
             className="px-2 py-1 rounded-md placeholder:text-black h-36 max-h-60 outline-none"
             style={{ backgroundColor: colorSelect }}
             required
@@ -66,8 +66,8 @@ export function NotesModal({ id, ptitle = "", ptext = "", pcolor = "#FEC871", cl
           }
         </nav>
         <footer className="flex items-center justify-start gap-2 mt-5">
-          <button className=" rounded-md px-3 py-1 bg-[#a688fa] text-white" onClick={() => closeModal(false)}>Close</button>
-          <button className="rounded-md px-3 py-1 bg-[#a688fa] text-white" onClick={edit ? handleEdit : handleSave}>Save</button>
+          <button className=" rounded-md px-3 py-1 bg-[#a688fa] text-white dark:text-black" onClick={() => closeModal(false)}>Cerrar</button>
+          <button className="rounded-md px-3 py-1 bg-[#a688fa] text-white dark:text-black" onClick={edit ? handleEdit : handleSave}>Guardar</button>
         </footer>
       </div>
     </div>

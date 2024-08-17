@@ -23,13 +23,13 @@ export function TodoModal({ closeModal }) {
             value={text}
             onChange={(e) => setText(e.target.value)}
             type="text"
-            placeholder="Add a task ..."
+            placeholder="Añadir una tarea ..."
             className="outline-none dark:bg-[#46424f] dark:text-white"
           />
         </main>
         <footer className="flex items-center justify-start gap-2 mt-5">
-          <button className=" rounded-md px-3 py-1 bg-[#a688fa] text-white dark:text-black" onClick={() => closeModal(false)}>Close</button>
-          <button className="rounded-md px-3 py-1 bg-[#a688fa] text-white dark:text-black" onClick={handleClick}>Save</button>
+          <button className=" rounded-md px-3 py-1 bg-[#a688fa] text-white dark:text-black" onClick={() => closeModal(false)}>Cerrar</button>
+          <button className="rounded-md px-3 py-1 bg-[#a688fa] text-white dark:text-black" onClick={handleClick}>Guardar</button>
         </footer>
       </div>
     </div>
