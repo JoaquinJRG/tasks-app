@@ -76,7 +76,7 @@ export default function TodoPage() {
       <main>
         <h1 className="text-3xl lg:text-5xl my-5 dark:text-white">Tareas</h1>
         <nav className="flex items-center justify-between mb-5 dark:text-white">
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 text-xs md:text-base">
             <button
               onClick={handleAll}
               className={clsx({ "border-b-2 border-[#a688fa] text-[#a688fa]": all })}
@@ -100,8 +100,10 @@ export default function TodoPage() {
             onClick={deleteAll}
             className="flex gap-2 p-2 rounded-md shadow-sm bg-[#a688fa] text-white dark:text-black"
           >
-            <TrashIcon />
-            <span>Borrar Todo</span>
+            <div className="hidden md:block">
+              <TrashIcon />
+            </div>
+            <span className="text-xs md:text-base">Borrar Todo</span>
           </button>
         </nav>
         <TodosBox filterTodos={filterTodos} />

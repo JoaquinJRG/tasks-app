@@ -8,6 +8,7 @@ import { SunIcon } from "./icons/SunIcon";
 import { MoonIcon } from "./icons/MoonIcon";
 import { useEffect, useState } from "react";
 import { HomeIcon } from "./icons/HomeIcon";
+import { KanbanIcon } from "./icons/KanbanIcon";
 
 export function DashBoard() {
   const pathName = usePathname();
@@ -56,6 +57,12 @@ export function DashBoard() {
           <Link href={"/todo"} className="flex items-center gap-2">
             <TaskIcon />
             <h2 className="hidden lg:block">Tareas</h2>
+          </Link>
+        </li>
+        <li className={clsx("border border-transparent hover:border-[#ba9ffb] transition-colors", { "bg-[#ba9ffb] text-black": pathName == "/kanban" })}>
+          <Link href={"/kanban"} className="flex items-center gap-2">
+            <KanbanIcon />
+            <h2 className="hidden lg:block">Kanban</h2>
           </Link>
         </li>
       </ul>
