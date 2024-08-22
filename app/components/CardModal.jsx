@@ -1,17 +1,12 @@
 "use client"
-import { useState, useContext, useEffect } from "react";
-import { TodosClass } from "../lib/todos";
-import { TodoContext } from "../todo/page";
 
-export function TodoModal({ closeModal }) {
+import { useState, useEffect } from "react";
 
-  const { setTodosList, setFilterTodos } = useContext(TodoContext);
+export function CardModal({ closeModal, createItem }) {
+
   const [text, setText] = useState('');
   const handleClick = async () => {
-    const newTodoList = await TodosClass.create(text);
-    setTodosList(...[newTodoList]);
-    setFilterTodos(...[newTodoList]);
-
+    createItem(text);
     closeModal(false);
   };
 
@@ -37,7 +32,7 @@ export function TodoModal({ closeModal }) {
             value={text}
             onChange={(e) => setText(e.target.value)}
             type="text"
-            placeholder="Añadir una tarea ..."
+            placeholder="Añadir un ítem ..."
             className="outline-none dark:bg-[#46424f] dark:text-white"
           />
         </main>

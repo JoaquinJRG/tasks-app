@@ -1,5 +1,5 @@
 "use client"
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import clsx from "clsx";
 import { colors } from "../lib/colors";
 import { NotesClass } from "../lib/notes";
@@ -28,6 +28,20 @@ export function NotesModal({ id, ptitle = "", ptext = "", pcolor = "#FEC871", cl
     setFilterList([...newNotes]);
     closeModal(false);
   };
+
+  const enterEsc = (e) => {
+    if (e.code === "Escape") {
+      closeModal(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", enterEsc);
+
+    return () => {
+      document.removeEventListener("keydown", enterEsc);
+    };
+  });
 
   return (
     <div className="h-full w-full flex items-center justify-center absolute top-0 right-0 bg-black/40 z-10">
