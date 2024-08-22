@@ -44,6 +44,7 @@ export function CardColumn({ cards, setCard, column, isDragging, handleDragging,
               <Card
                 key={card.id}
                 data={card}
+                setCards={setCard}
                 handleDragging={handleDragging}
               />
             ))

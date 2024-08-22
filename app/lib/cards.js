@@ -1,7 +1,6 @@
 export class CardClass {
   static cards = []; 
 
-
   static async getAll() {
 
     if(localStorage.hasOwnProperty('cards')) {
@@ -36,6 +35,13 @@ export class CardClass {
     this.cards = this.cards.map((card) => (card.id === id) ? newCard : card);
     localStorage.setItem('cards', JSON.stringify(this.cards)); 
     
+    return this.cards; 
+  }
+
+  static delete(id) {
+    this.cards = this.cards.filter((card) => card.id !== id);
+    localStorage.setItem('cards', JSON.stringify(this.cards)); 
+
     return this.cards; 
   }
 }
